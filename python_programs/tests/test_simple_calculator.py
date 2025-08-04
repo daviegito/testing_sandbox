@@ -2,12 +2,12 @@ import pytest
 from programs.simple_calculator import Calculator
 
 def test_sum():
-  pass
+  assert sum(12,21) == 33
 def test_sub():
-  pass
+  assert sub(21,12) == 9
 def test_mul():
-  pass
+  assert mul(12,3) == 36
 def test_div():
-  pass
+  assert div(12,3) == 4
 def test_non_numbers():
-  pass
+  assert sum("hello, ", "sup") == "hello, sup"
