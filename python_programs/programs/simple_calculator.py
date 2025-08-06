@@ -1,25 +1,54 @@
 import math
-
 class Calculator():
   def __init__(self, a, b, option):
     self.a = a
     self.b = b
     self.option = option
+
+  def sum(self, a, b):
+    sum = a+b
+    return sum
+
+  def sub(self, a, b):
+    sub = a-b
+    return sub
+
+  def mul(self, a, b):
+    return a*b
+  
+  def div(self, a, b): 
+    return a/b
+  
+  def exp(self, a, b):
+    return math.pow(a,b)
+  
+  def sqrt_a(self, a, b):
+    return math.sqrt(a)
     
+  def sqrt_b(self, a, b):
+    return math.sqrt(b)
+
   def operations(self, a, b, option):
     if option == "sum":
-      print(f"{a} + {b} = {a+b}")
+      sum(a,b)
     if option == "sub":
-      print(f"{a} - {b} = {a-b}")
+      sub(a,b)
     if option == "mul":
-      print(f"{a} * {b} = {a*b}")
+      mul(a,b)
     if option == "div":
-      print(f"{a} / {b} = {a/b}")    
+      div(a,b)
     if option == "exp":
-      print(f"{a} ^ {b} = {math.pow(a,b)}")
+      exp(a,b)
     if option == "sqrt":
-      print(f"Square root of {a} = {math.sqrt(a)}")
-      print(f"Square root of {b} = {math.sqrt(b)}")
+      a_or_b = input("a or b?")
+      if a_or_b == "a":
+        sqrt_a(a,b)
+      elif a_or_b == "b":
+        sqrt_b(a,b)
+      else:
+        print("Something is wrong. Try again!")
+    else:
+      print("No option was typed. Terminating program!")
 
 print("Could you type your name?")
 name = input()
