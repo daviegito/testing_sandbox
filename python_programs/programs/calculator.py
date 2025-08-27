@@ -1,6 +1,6 @@
 class Triangle:
 
-    def __init__(self, width,length,height):
+    def __init__(self, width: float,length: float,height: float):
         self.width = width
         self.length = length
         self.height = height
