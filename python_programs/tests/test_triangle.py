@@ -1,4 +1,4 @@
-from programs.calculator import Triangle
+from programs.triangle import Triangle
 
 import pytest
 
@@ -41,3 +41,11 @@ def test_if_floats_accepted():
 def test_different_data_types():
     triangle = Triangle(4,9.8,12)
     assert triangle.is_triangle() is True
+
+def test_if_strings_allowed():
+    with pytest.raises(TypeError):
+        triangle = Triangle("oi", "a", "b")
+
+def test_if_tuples_allowed():
+    with pytest.raises(TypeError):
+        triangle = Triangle(("a"),(3),([5.67]))
